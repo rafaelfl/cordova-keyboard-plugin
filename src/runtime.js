@@ -93,17 +93,18 @@ cr.plugins_.KeyboardPlugin = function(runtime)
 		var self = this;
 		//alert("disable scroll");
 		Keyboard.shrinkView(false);
-		Keyboard.disableScrollingInShrinkView(false);
+		Keyboard.disableScrollingInShrinkView(true);
 
-		/*window.addEventListener('keyboardWillShow', function () {
+		window.addEventListener('keyboardWillShow', function () {
 			// Describe your logic which will be run each time when keyboard is about to be shown.
-			window.scrollTo(0, -300);
+			//alert("teclado mostrado!");
+			window.scrollTo(0, 0);
 		});
 		
 		window.addEventListener('keyboardWillHide', function () {
 			// Describe your logic which will be run each time when keyboard is about to be closed.
 			window.scrollTo(0, 0);
-		});*/
+		});
 	};
 	
 
@@ -111,7 +112,7 @@ cr.plugins_.KeyboardPlugin = function(runtime)
 	{
 		//alert("disable scroll");
 		Keyboard.shrinkView(true);
-		Keyboard.disableScrollingInShrinkView(false);
+		Keyboard.disableScrollingInShrinkView(true);
 
 		//window.removeEventListener('keyboardWillShow', scrollUp);
 		//window.removeEventListener('keyboardWillHide', scrollDown);
